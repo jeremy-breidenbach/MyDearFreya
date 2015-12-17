@@ -8,7 +8,7 @@ Courtesy of Reddit user Skitals, more discussion here: http://www.reddit.com/r/C
 2. Download Crouton script  https://github.com/dnschneid/crouton
 3. Download MyDearFreya script, either at https://drive.google.com/folderview?id=0B5m4MQHPNKZjc1FfWldnWnZyM2M&usp=sharing, or from this GitHub repository
 4. Make sure freya.sh and crouton are in your ~/Downloads folder. To install, from a crosh shell run:
-    ```shell
+    ```
     $ cd ~/Downloads
     $ sudo sh freya.sh
     ```
@@ -26,33 +26,37 @@ Courtesy of Reddit user Skitals, more discussion here: http://www.reddit.com/r/C
     To do so, click on your Applications bar and launch Software Updates. It will automatically check for updates the first time you launch it. Click “Install Updates” to begin the update.
 
 2. Upon using Elementary OS you may find that your changes in System Settings do not save; if so, run the following command from terminal
-    ```shell
+    ```
     $ sudo chown -R $USER:$USER /home/$USER/.config
     ```
 
 3. You may also find that the Software Center does not work; if so, run the following command from terminal
-    ```shell
+    ```
     $ sudo chown -R $USER:$USER /home/$USER/.cache
     ```
 
 4. You can add the Elementary Tweaks tool to your System Settings to allow additional UI Tweaks
-    ```shell
+    ```
     $ sudo add-apt-repository ppa:mpstark/elementary-tweaks-daily
     $ sudo apt-get update
     $ sudo apt-get install elementary-tweaks
     ```
 
 5. Install Ubuntu Restricted Extras to get codecs for playing mp3's
-    ```shell
+    ```
     $ sudo apt-get install ubuntu-restricted-extras
     ```
 
 6. Here are a few links showing more things you can do after installing Elementary OS. These include installing alternative web browsers like Firefox or Chrome, or installing other programs:
-    * http://itsfoss.com/things-todo-elementary-os-freya/
-    * http://fuckyeah-elementaryos.tumblr.com/post/117983423013/things-to-do-after-installing-elementary-os-freya
-    * http://www.binarytides.com/better-elementary-os-luna/
+    * [Things To Do After Installing elementary OS Freya]( http://itsfoss.com/things-todo-elementary-os-freya/)
+    * Another [Things to do after installing elementary OS Freya](http://fuckyeah-elementaryos.tumblr.com/post/117983423013/things-to-do-after-installing-elementary-os-freya)
+    * An article for the previous version (Luna) but still applies [20 things to do after installing Elementary OS 0.2 Luna](http://www.binarytides.com/better-elementary-os-luna/)
 
 7. Anytime you need to switch between Chrome OS and Elementary OS, use CTRL+ALT+SHIFT+BACK or CTRL+ALT+SHIFT+FORWARD (the BACK and FORWARD keys are on the top row of your keyboard, next to Esc).
+
+8. Other crouton resources:
+    * [Cheat Sheet](https://github.com/dnschneid/crouton/wiki/Crouton-Command-Cheat-Sheet)
+    * [Wiki](https://github.com/dnschneid/crouton/wiki)
 
 
 ## Changes
