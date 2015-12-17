@@ -8,16 +8,16 @@ Courtesy of Reddit user Skitals, more discussion here: http://www.reddit.com/r/C
 2. Download Crouton script  https://github.com/dnschneid/crouton
 3. Download MyDearFreya script, either at https://drive.google.com/folderview?id=0B5m4MQHPNKZjc1FfWldnWnZyM2M&usp=sharing, or from this GitHub repository
 4. Make sure freya.sh and crouton are in your ~/Downloads folder. To install, from a crosh shell run:
-```shell
-$ cd ~/Downloads
-$ sudo sh freya.sh
-```
+    ```shell
+    $ cd ~/Downloads
+    $ sudo sh freya.sh
+    ```
 5. This script is not fully automated (yet)... follow the prompts, and enter the commands as directed.
 6. NOTE: After the OS is installed, you must return to the crosh shell and enter ```sudo sh freya.sh continue``` to get the startelementary script!
 7. After installation, you can enter elementary from a crosh shell with:
-```shell
-$ sudo startelementary
-```
+    ```shell
+    $ sudo startelementary
+    ```
 
 
 ## After Install
@@ -26,26 +26,26 @@ $ sudo startelementary
     To do so, click on your Applications bar and launch Software Updates. It will automatically check for updates the first time you launch it. Click “Install Updates” to begin the update.
 
 2. Upon using Elementary OS you may find that your changes in System Settings do not save; if so, run the following command from terminal
-```shell
-$ sudo chown -R $USER:$USER /home/$USER/.config
-```
+    ```shell
+    $ sudo chown -R $USER:$USER /home/$USER/.config
+    ```
 
 3. You may also find that the Software Center does not work; if so, run the following command from terminal
-```shell
-$ sudo chown -R $USER:$USER /home/$USER/.cache
-```
+    ```shell
+    $ sudo chown -R $USER:$USER /home/$USER/.cache
+    ```
 
 4. You can add the Elementary Tweaks tool to your System Settings to allow additional UI Tweaks
-```shell
-$ sudo add-apt-repository ppa:mpstark/elementary-tweaks-daily
-$ sudo apt-get update
-$ sudo apt-get install elementary-tweaks
-```
+    ```shell
+    $ sudo add-apt-repository ppa:mpstark/elementary-tweaks-daily
+    $ sudo apt-get update
+    $ sudo apt-get install elementary-tweaks
+    ```
 
 5. Install Ubuntu Restricted Extras to get codecs for playing mp3's
-```shell
-$ sudo apt-get install ubuntu-restricted-extras
-```
+    ```shell
+    $ sudo apt-get install ubuntu-restricted-extras
+    ```
 
 6. Here are a few links showing more things you can do after installing Elementary OS. These include installing alternative web browsers like Firefox or Chrome, or installing other programs:
     * http://itsfoss.com/things-todo-elementary-os-freya/
