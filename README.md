@@ -29,22 +29,25 @@ $ sudo startelementary
 ```shell
 $ sudo chown -R $USER:$USER /home/$USER/.config
 ```
+
 3. You may also find that the Software Center does not work; if so, run the following command from terminal
 ```shell
 $ sudo chown -R $USER:$USER /home/$USER/.cache
 ```
+
 4. You can add the Elementary Tweaks tool to your System Settings to allow additional UI Tweaks
 ```shell
 $ sudo add-apt-repository ppa:mpstark/elementary-tweaks-daily
 $ sudo apt-get update
 $ sudo apt-get install elementary-tweaks
 ```
-5. Install Ubuntu Restricted Extras to get codecs for playing mp3's
-    ```shell
-    $ sudo apt-get install ubuntu-restricted-extras
-    ```
-6. Here are a few links showing more things you can do after installing Elementary OS. These include installing alternative web browsers like Firefox or Chrome, or installing other programs:
 
+5. Install Ubuntu Restricted Extras to get codecs for playing mp3's
+```shell
+$ sudo apt-get install ubuntu-restricted-extras
+```
+
+6. Here are a few links showing more things you can do after installing Elementary OS. These include installing alternative web browsers like Firefox or Chrome, or installing other programs:
     * http://itsfoss.com/things-todo-elementary-os-freya/
     * http://fuckyeah-elementaryos.tumblr.com/post/117983423013/things-to-do-after-installing-elementary-os-freya
     * http://www.binarytides.com/better-elementary-os-luna/
