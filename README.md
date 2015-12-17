@@ -16,7 +16,7 @@ Courtesy of Reddit user Skitals, more discussion here: http://www.reddit.com/r/C
 5. This script is not fully automated (yet)... follow the prompts, and enter the commands as directed.
 6. NOTE: After the OS is installed, you must return to the crosh shell and enter ```sudo sh freya.sh continue``` to get the startelementary script!
 7. After installation, you can enter elementary from a crosh shell with:
-    ```shell
+    ```
     $ sudo startelementary
     ```
 
