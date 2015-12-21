@@ -12,20 +12,20 @@ chroot () {
     export LC_ALL=en_US.UTF-8
     export LANG=en_US.UTF-8
     export LANGUAGE=en_US.UTF-8
-    
+
     echo Installing software-properties-common...
     sudo apt-get -y -qq install software-properties-common
-    
+
     echo Adding Elementary OS repositories...
     sudo apt-add-repository -y ppa:elementary-os/os-patches
     sudo apt-add-repository -y ppa:elementary-os/stable
-    
+
     echo Updating package lists...
     sudo apt-get -qq update
-    
+
     echo Performing distribution upgrade...
     sudo apt-get -y -qq dist-upgrade
-    
+
     echo Installing elementary-desktop... this will take some time...
 	sudo apt-get -y -qq install elementary-desktop
 
@@ -34,21 +34,21 @@ chroot () {
     dbus-launch gsettings set org.gnome.settings-daemon.peripherals.touchpad tap-to-click true
     dbus-launch gsettings set org.gnome.settings-daemon.peripherals.touchpad motion-acceleration 5.0
     #dbus-launch gsettings set org.gnome.desktop.interface cursor-size 48
-    
+
     echo Fixing permissions...
     sudo chown -R $USER:$USER /home/$USER/.cache
     sudo chown -R $USER:$USER /home/$USER/.config
     sudo sed -i '1s/^/iface wlan0 inet manual\n/' /etc/network/interfaces
-    
+
     echo Creating your startelementary scripts...
-	cd /usr/bin 
+	cd /usr/bin
 	sudo echo '#!/bin/sh
-  exec xinit /usr/bin/xinit_pantheon' >> startelementary 
-	sudo chmod +x startelementary 
+  exec xinit /usr/bin/xinit_pantheon' >> startelementary
+	sudo chmod +x startelementary
 	sudo chown root:root startelementary
 	sudo echo '#!/bin/sh
-  gnome-session --session=pantheon' >> xinit_pantheon 
-	sudo chmod +x xinit_pantheon 
+  gnome-session --session=pantheon' >> xinit_pantheon
+	sudo chmod +x xinit_pantheon
 	sudo chown root:root xinit_pantheon
     echo ==================================================
     echo ==================================================
@@ -70,13 +70,13 @@ chroot () {
 
 chrome () {
 
-	sh -e crouton -r trusty -t x11,extension -n watson
+	sh -e crouton -r trusty -t x11,extension -n freya
     echo ==================================================
     echo ==================================================
     echo ==================================================
     echo ==================================================
     echo To continue, enter your chroot:
-    echo '      sudo enter-chroot -n watson'
+    echo '      sudo enter-chroot -n freya'
     echo ==================================================
     echo ==================================================
     echo And from the chroot, enter the following command:
@@ -106,12 +106,12 @@ APPLICATION="${0##*/}"
 
 USAGE="$APPLICATION [options]
 
-Wraps enter-chroot to start an Xfce session.
+Wraps enter-chroot to start an Elementary OS session.
 By default, it will log into the primary user on the first chroot found.
 
 Options are directly passed to enter-chroot; run enter-chroot to list them."
 
-exec sh -e "`dirname "\`readlink -f "$0"\`"`/enter-chroot" -n watson "$@" "" \
+exec sh -e "`dirname "\`readlink -f "$0"\`"`/enter-chroot" -n freya "$@" "" \
     exec startelementary' >> /usr/local/bin/startelementary
     sudo chown root:root /usr/local/bin/startelementary
     sudo chmod +x /usr/local/bin/startelementary
